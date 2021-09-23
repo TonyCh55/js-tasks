@@ -129,34 +129,6 @@ const buyBookForUser = (bookId, userId, callback) => {
 //     callback(null, "Success");
 //   }
 // };
-//////////////////////////////////////////////////////////
-
-// try {
-//   const user = await database.getUser(userId, (err, user) => {
-//     if (err) {
-//       callback(err);
-//     }
-//     return user;
-//   });
-
-//   const userBooks = await database.getUsersBook(userId, (err, userBooks) => {
-//     if (err) {
-//       callback(err);
-//     } else if (userBooks.includes(bookId)) {
-//       callback(`User already has book with id=${bookId}`);
-//     } else {
-//       const buyBook = database.buyBook(bookId, (err) => {
-//         if (err) {
-//           callback(err);
-//         } else {
-//           callback(null, "Success");
-//         }
-//       });
-//     }
-//   });
-// } catch (err) {
-//   throw new Error(err.message);
-// }
 
 const test = async () => {
   await buyBookForUser(1, 1, (err, message) => {
